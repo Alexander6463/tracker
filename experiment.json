@@ -1,0 +1,70 @@
+{
+    "Experiment_name": "NTU_experiment",
+    "Path": "NTU_experiment",
+    "Analysis_Params": {
+        "EyeTracker": {
+            "Sampling_Freq": 2000,
+            "Display_width": 1200,
+            "Display_height": 900,
+            "aoi": [
+                0.0,
+                0.0,
+                1200.0,
+                900.0
+            ]
+        }
+    },
+    "Columns_of_interest": {
+        "EyeTracker": [
+            "GazeLeftx",
+            "GazeLefty",
+            "GazeRightx",
+            "GazeRighty",
+            "PupilLeft",
+            "PupilRight",
+            "FixationSeq",
+            "GazeAOI"
+        ],
+        "Extra": [
+            "StimulusName",
+            "EventSource"
+        ]
+    },
+    "Subjects": {
+        "Group1": {
+            "ws01": {
+                "Gender": "M"
+            }
+        },
+        "Group2": {
+            "ws02": {
+                "Gender": "F"
+            }
+        }
+    },
+    "Stimuli": {
+        "Type_1": [
+            "stimulus_0",
+            "stimulus_1",
+            "stimulus_2",
+            "stimulus_3",
+            "stimulus_4",
+            "stimulus_5",
+            "stimulus_6",
+            "stimulus_7",
+            "stimulus_8",
+            "stimulus_9",
+            "stimulus_11",
+            "stimulus_12",
+            "stimulus_13",
+            "stimulus_14",
+            "stimulus_15",
+            "stimulus_16",
+            "stimulus_17",
+            "stimulus_18",
+            "stimulus_19",
+            "stimulus_20",
+            "stimulus_21"
+        ]
+    }
+}

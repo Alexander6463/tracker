@@ -1,7 +1,8 @@
 from typing import Union
 import json
-
 from pathlib import Path
+
+import click
 
 
 def create_experiment_structure(
@@ -10,8 +11,8 @@ def create_experiment_structure(
 ) -> None:
     with open(experiment_json_config_path) as f:
         experiment_json_config = json.load(f)
-    experiment_json_config['Experiment_name'] = experiment_dir
-    experiment_json_config['Path'] = experiment_dir
+    experiment_json_config['Experiment_name'] = experiment_directory_name
+    experiment_json_config['Path'] = experiment_directory_name
     Path(experiment_directory_name).mkdir()
     (Path(experiment_directory_name) / "Data").mkdir()
     (Path(experiment_directory_name) / "Stimuli").mkdir()
@@ -44,10 +45,11 @@ def preprocessing_experiment_data(
                     f2.write(text)
 
 
-if __name__ == "__main__":
-    experiment_dir = "experiment"
-    experiment_json_config = "experiment.json"
-    input_path = Path("input_files")
+@click.command()
+@click.option('--experiment-dir', help="Path to directory with your experiment")
+@click.option('--experiment-json-config', help="Path to your config")
+@click.option('--input-path', help="Path to your input asc files")
+def main(experiment_dir, experiment_json_config, input_path):
     output_path = Path(experiment_dir) / "Data"
     create_experiment_structure(
         experiment_directory_name=experiment_dir,
@@ -57,3 +59,7 @@ if __name__ == "__main__":
         input_data_path=input_path,
         output_data_path=output_path
     )
+
+
+if __name__ == "__main__":
+    main()

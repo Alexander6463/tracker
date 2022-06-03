@@ -1,20 +1,28 @@
 import shutil
 from pathlib import Path
 
+import click
 from PyTrack.formatBridge import generateCompatibleFormat
 
-experiment_dir_name = "experiment"
-experiment_path = str(Path(experiment_dir_name).absolute())
 
-generateCompatibleFormat(
-    exp_path=experiment_path,
-    device="eyelink",
-    start='start_trial',
-    stop="stop_trial",
-    eye='B'
-)
+@click.command()
+@click.option('--experiment-dir', help="Path to directory with your experiment")
+def main(experiment_dir):
+    experiment_path = str(Path(experiment_dir).absolute())
 
-shutil.move(
-    src=Path(experiment_dir_name) / f"Data{experiment_dir_name}.db",
-    dst=Path(experiment_dir_name) / "Data" / f"{experiment_dir_name}.db",
-)
+    generateCompatibleFormat(
+        exp_path=experiment_path,
+        device="eyelink",
+        start='start_trial',
+        stop="stop_trial",
+        eye='B'
+    )
+
+    shutil.move(
+        src=Path(experiment_dir) / f"Data{experiment_dir}.db",
+        dst=Path(experiment_dir) / "Data" / f"{experiment_dir}.db",
+    )
+
+
+if __name__ == "__main__":
+    main()

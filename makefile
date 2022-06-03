@@ -12,6 +12,7 @@ run_all:
 	python3 analyze.py --experiment-dir ${EXPERIMENT_DIR} --visualize ${VISUALIZE} \
 --statistical-test ${STATISTICAL_TEST}
 
+
 run_preprocessing:
 	python3 preprocessing.py --experiment-dir ${EXPERIMENT_DIR} \
 	--experiment-json-config ${EXPERIMENT_JSON_CONFIG} --input-path ${INPUT_PATH}

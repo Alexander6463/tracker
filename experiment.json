@@ -3,7 +3,7 @@
     "Path": "NTU_experiment",
     "Analysis_Params": {
         "EyeTracker": {
-            "Sampling_Freq": 2000,
+            "Sampling_Freq": 500,
             "Display_width": 1200,
             "Display_height": 900,
             "aoi": [
@@ -32,12 +32,69 @@
     },
     "Subjects": {
         "Group1": {
-            "ws01": {
+            "ws03": {
+                "Gender": "M"
+            },
+            "ws04": {
+                "Gender": "M"
+            },
+            "ws08": {
+                "Gender": "M"
+            },
+            "ws10": {
+                "Gender": "M"
+            },
+            "ws14": {
+                "Gender": "M"
+            },
+            "ws16": {
+                "Gender": "M"
+            },
+            "ws19": {
+                "Gender": "M"
+            },
+            "ws20": {
+                "Gender": "M"
+            },
+            "ws21": {
                 "Gender": "M"
             }
         },
         "Group2": {
+            "ws01": {
+                "Gender": "F"
+            },
             "ws02": {
+                "Gender": "F"
+            },
+            "ws05": {
+                "Gender": "F"
+            },
+            "ws06": {
+                "Gender": "F"
+            },
+            "ws07": {
+                "Gender": "F"
+            },
+            "ws09": {
+                "Gender": "F"
+            },
+            "ws11": {
+                "Gender": "F"
+            },
+            "ws12": {
+                "Gender": "F"
+            },
+            "ws15": {
+                "Gender": "F"
+            },
+            "ws17": {
+                "Gender": "F"
+            },
+            "ws18": {
+                "Gender": "F"
+            },
+            "ws22": {
                 "Gender": "F"
             }
         }
@@ -54,6 +111,7 @@
             "stimulus_7",
             "stimulus_8",
             "stimulus_9",
+            "stimulus_10",
             "stimulus_11",
             "stimulus_12",
             "stimulus_13",

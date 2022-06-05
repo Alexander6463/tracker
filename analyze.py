@@ -15,7 +15,7 @@ def main(experiment_dir: str, visualize: bool, statistical_test: str) -> None:
     exp.metaMatrixInitialisation()
 
     exp.analyse(parameter_list={"all"},
-                between_factor_list=["Subject_type", "Gender"],
+                between_factor_list=["Gender"],
                 within_factor_list=["Stimuli_type"],
                 statistical_test=statistical_test,
                 file_creation=True)
